@@ -7,7 +7,7 @@ Files for reusable setup on a new mac device.
 You can install multiple apps in one go by placing them all into a text file `apps.txt` and then running brew install:
 
 ```bash
-xargs brew install < apps.txt
+xargs -L 1 brew install < apps.txt
 ```
 
 #### Reference
