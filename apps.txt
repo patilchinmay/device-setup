@@ -1,4 +1,16 @@
-visual-studio-code
+--cask docker
+--cask visual-studio-code
+--cask alt-tab
+--cask rectangle
+--cask stats
+hadolint
+kubernetes-cli
+kind
+kubectx
+int128/kubelogin/kubelogin
+pre-commit
 fzf
 bat
 eza
+pipx
+pyenv
