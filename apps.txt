@@ -3,6 +3,7 @@
 --cask alt-tab
 --cask rectangle
 --cask stats
+--cask calibre
 hadolint
 kubernetes-cli
 kind
