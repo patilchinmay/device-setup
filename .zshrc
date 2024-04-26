@@ -81,6 +81,7 @@ plugins=(
 git
 zsh-autosuggestions
 zsh-syntax-highlighting
+aws
 kubectl
 docker
 docker-compose
