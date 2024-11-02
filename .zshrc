@@ -118,16 +118,36 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Fuzzy Finder: zsh
+# ohmyzsh docker plugin autocompletion
+zstyle ':completion:*:*:docker:*' option-stacking yes
+zstyle ':completion:*:*:docker-*:*' option-stacking yes
+
+
+########### Tools Begin #############
+
+# fzf post-install
 eval "$(fzf --zsh)"
+
+# zoxide
+eval "$(zoxide init zsh)"
+
+########### Tools End #############
+
+
+# Aliases
+source ~/.aliases.sh
+
 
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# Aliases
-source ~/.aliases.sh
 
 # Created by `pipx` on 2024-04-03 05:09:21
 export PATH="$PATH:/Users/chinmay.patil/.local/bin"
+
+# Add $GOPATH to path so that tools installed by 'go install' command are found in path
+# 'go install' command downloads the binaries into $GOPATH directory.
+export PATH=$PATH:$(go env GOPATH)/bin
+
