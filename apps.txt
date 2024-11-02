@@ -2,10 +2,12 @@
 --cask visual-studio-code
 --cask alt-tab
 --cask rectangle
---cask stats
 --cask calibre
+--cask betterdisplay
+stats
+go
 hadolint
-kubernetes-cli
+kubectl
 kind
 kubectx
 int128/kubelogin/kubelogin
@@ -13,6 +15,7 @@ pre-commit
 fzf
 bat
 eza
+zoxide
 tfenv
 pipx
 pyenv
