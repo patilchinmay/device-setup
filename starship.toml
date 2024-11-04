@@ -1,0 +1,10 @@
+# ~/.config/starship.toml
+
+[cmd_duration]
+min_time = 200
+show_milliseconds=true
+format = 'took [$duration](bold yellow)'
+
+
+[kubernetes]
+disabled = false
