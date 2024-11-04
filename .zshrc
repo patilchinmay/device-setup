@@ -15,7 +15,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="robbyrussell"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -94,7 +96,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -116,11 +118,13 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 
 # ohmyzsh docker plugin autocompletion
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
+
 
 
 ########### Tools Begin #############
@@ -134,20 +138,32 @@ eval "$(zoxide init zsh)"
 ########### Tools End #############
 
 
-# Aliases
+# aliases
 source ~/.aliases.sh
 
 
-# Pyenv
+# pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 
-# Created by `pipx` on 2024-04-03 05:09:21
-export PATH="$PATH:/Users/chinmay.patil/.local/bin"
+# Created by `pipx` on 2024-04-09 04:09:05
+export PATH="$PATH:/Users/chinmay/.local/bin"
+
 
 # Add $GOPATH to path so that tools installed by 'go install' command are found in path
 # 'go install' command downloads the binaries into $GOPATH directory.
 export PATH=$PATH:$(go env GOPATH)/bin
+
+
+# Iterm2 shell integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+
+########### starship begin #############
+
+eval "$(starship init zsh)"
+
+########### starship end #############
 
