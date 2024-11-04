@@ -8,3 +8,12 @@ format = 'took [$duration](bold yellow)'
 
 [kubernetes]
 disabled = false
+
+
+[python]
+disabled = false
+symbol = " "
+
+[golang]
+disabled = false
+symbol = " "
