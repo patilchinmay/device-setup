@@ -18,3 +18,35 @@ symbol = " "
 [golang]
 disabled = false
 symbol = " "
+
+
+# AWS Configuration
+[aws]
+format = '[$symbol($profile )(\($region\) )]($style)'
+symbol = "󰸏 " # AWS symbol
+style = "bold yellow"
+disabled = false
+
+[aws.region_aliases]
+us-east-1 = "ue1"
+us-west-2 = "uw2"
+ap-northeast-1 = "apne1"
+
+
+# Google Cloud Configuration
+[gcloud]
+format = '[$symbol$account(@$domain)(\($project\))]($style) '
+symbol = "󰊭 " # Google Cloud symbol
+style = "bold blue"
+disabled = true
+
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "bold cyan"
+
+
+[git_branch]
+symbol = "󰊢 "
+
