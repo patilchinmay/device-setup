@@ -139,7 +139,7 @@ disabled = true
 
 [directory]
 truncation_length = 3
-style = "bold cyan"
+style = "bold green"
 
 
 [git_branch]
