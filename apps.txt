@@ -21,3 +21,4 @@ tfenv
 pipx
 pyenv
 starship
+bluesnooze
