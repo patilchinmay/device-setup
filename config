@@ -1,0 +1,33 @@
+Host dev-pc
+  HostName XH23040011-L.pc.internal.woven.tech
+  User chinmay-patil
+  IdentityFile ~/.ssh/dev-pc.private
+  ServerAliveInterval 60
+
+# Work/Emu account
+Host github.com
+  HostName github.com
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/github_emu_ed25519
+
+# Personal GitHub account
+# Clone the personal github accounts using github.com-personal instead of github.com
+# e.g. git clone git@github.com-personal:patilchinmay/Leetcode.git
+Host github.com-personal
+  HostName github.com
+  AddKeysToAgent yes
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/github_personal
+  IdentitiesOnly yes  # Add this line to force using only this key
+
+Host dgx
+  HostName 172.16.200.191
+  User dgxuser
+  IdentityFile ~/.ssh/id_ed25519
+  ServerAliveInterval 60
+
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+  ServerAliveInterval 60
