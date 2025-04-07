@@ -167,3 +167,10 @@ eval "$(starship init zsh)"
 
 ########### starship end #############
 
+export GOPRIVATE=github.com/emu-org-name
+
+######################################
+
+eval "$(ssh-agent -s)"
+
+######################################
